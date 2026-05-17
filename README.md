@@ -1,73 +1,84 @@
 # ShadowWorth AI
 
-ShadowWorth AI is a behavioral financial intelligence project that estimates invisible financial damage from everyday habits before people realize the cost.
+> Your habits are pricing your future.
 
-It is not a finance tracker. It is an AI-style future-self simulator for opportunity loss.
+ShadowWorth AI is a cinematic AI psychological mirror that visualizes invisible financial self-destruction from current behavior.
 
-## Core Idea
+It is not a budgeting app, finance tracker, or generic analytics dashboard. It is an emotionally paced product experience that asks a sharper question:
 
-Most finance apps answer: "Where did my money go?"
+**What is the future cost of the person you keep becoming every day?**
 
-ShadowWorth AI answers: "Where is my future wealth silently dying?"
+![ShadowWorth AI preview](./shadowworth-preview.png)
 
-The app analyzes behavioral inputs such as scrolling, procrastination, delayed learning, impulse spending, subscriptions, and sleep quality. It then estimates 5-year opportunity loss, maps a financial identity, detects top leaks, and generates a recovery roadmap.
+## Product Direction
 
-## Features
+ShadowWorth is designed like a psychological reveal, not a SaaS dashboard.
 
-- Opportunity loss engine for habit-based financial damage
-- Future-self simulation with recovered path vs current path
-- AI financial identity mapping
-- Wealth death timeline with monthly hidden loss
-- Digital leakage detection
-- Focus and financial momentum gauges
-- Copyable insight card for sharing
-- Premium responsive dashboard UI
+The experience begins almost empty: one sentence, one button, silence. When the user begins analysis, the system slowly exposes behavioral signals, future divergence, lost acceleration, and the hidden leaks widening the gap between current self and optimized self.
+
+## Core Feature
+
+### Future Divergence Engine
+
+The main interaction compares two timelines:
+
+- **Current Self:** projected yearly growth if the present behavior pattern continues
+- **Optimized Self:** projected yearly growth if attention, learning, and spending behavior improve
+- **Divergence:** estimated lifetime potential gap between those two futures
+
+This is the emotional center of the product.
+
+## What It Measures
+
+- Screen-time attention bleed
+- Delayed skill-building
+- Procrastination drag
+- Impulse-spending residue
+- Unused subscription leakage
+- Sleep and routine consistency
+
+## Experience Principles
+
+- Cinematic restraint over flashy UI
+- Negative space over dashboard clutter
+- Emotional copy over generic metrics
+- Slow reveal over instant information dump
+- Future divergence over ordinary charts
 
 ## Tech Stack
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Canvas API for trajectory visualization
-- Browser-native model logic with no external runtime dependency
-
-## Model Layer
-
-This version uses a transparent synthetic future model:
-
-- behavioral feature weighting
-- opportunity-cost scoring
-- earning trajectory simulation
-- identity classification
-- recommendation generation
-
-Future versions can add LLM reasoning, clustering, screen-time imports, spending-log analysis, time-series forecasting, and personalized recovery agents.
+- Next.js
+- React
+- TypeScript
+- Framer Motion
+- Lenis smooth scrolling
+- Canvas visualization
+- GSAP and Three.js included for future cinematic motion layers
 
 ## Run Locally
 
 ```bash
+npm install
 npm run dev
 ```
 
-Then open:
+Open:
 
 ```text
 http://localhost:4173
 ```
 
-You can also run it without npm:
+## Production Check
 
 ```bash
-python3 -m http.server 4173
+npm run check
 ```
+
+This runs TypeScript validation and a production Next.js build.
 
 ## GitHub Upload
 
 ```bash
-git init
-git add .
-git commit -m "Build ShadowWorth AI dashboard"
-git branch -M main
 git remote add origin https://github.com/YOUR_USERNAME/shadowworth-ai.git
 git push -u origin main
 ```

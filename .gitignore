@@ -1,8 +1,11 @@
 .DS_Store
 node_modules/
+.next/
+out/
 dist/
 build/
 .env
 .env.local
 *.log
 coverage/
+tsconfig.tsbuildinfo
