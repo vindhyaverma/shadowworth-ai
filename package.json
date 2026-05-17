@@ -1,0 +1,21 @@
+{
+  "name": "shadowworth-ai",
+  "version": "1.0.0",
+  "description": "Behavioral financial intelligence dashboard that estimates invisible opportunity loss from current habits.",
+  "private": false,
+  "scripts": {
+    "start": "python3 -m http.server 4173",
+    "dev": "python3 -m http.server 4173",
+    "check": "node --check app.js"
+  },
+  "keywords": [
+    "ai",
+    "behavioral-finance",
+    "opportunity-cost",
+    "financial-intelligence",
+    "productivity",
+    "dashboard"
+  ],
+  "author": "Vindhya Verma",
+  "license": "MIT"
+}

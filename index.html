@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ShadowWorth AI estimates invisible financial damage from habits, procrastination, subscriptions, and attention leaks."
+    />
+    <title>ShadowWorth AI | Behavioral Financial Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient-layer" aria-hidden="true">
+      <span class="beam beam-a"></span>
+      <span class="beam beam-b"></span>
+      <span class="scanline"></span>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="#analyzer" aria-label="ShadowWorth AI home">
+        <span class="brand-mark">S</span>
+        <span>ShadowWorth AI</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#analyzer">Analyzer</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#roadmap">Roadmap</a>
+      </nav>
+      <a class="topbar-action" href="#analyzer">Run Diagnosis</a>
+    </header>
+
+    <main class="app-shell">
+      <section class="hero-experience" id="analyzer" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Behavioral financial intelligence</p>
+          <h1 id="page-title">See the wealth your habits are quietly deleting.</h1>
+          <p class="hero-line">
+            ShadowWorth AI turns scrolling, procrastination, impulse spending, and weak routines into a future-money diagnosis with a recovery path.
+          </p>
+          <div class="hero-actions">
+            <a href="#controlPanel" class="primary-link">Start Live Scan</a>
+            <button class="ghost-button" id="loadDemo" type="button">Load Harsh Demo</button>
+          </div>
+        </div>
+
+        <section class="diagnostic-card" aria-label="Live ShadowWorth diagnosis">
+          <div class="diagnostic-orbit" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <p class="eyebrow">Current shadow estimate</p>
+          <div class="loss-number" id="lossNumber">₹0</div>
+          <p id="lossCaption">Calculated from behavior, compounding, and delayed skill growth.</p>
+          <div class="identity-pill">
+            <span id="identityType">Hidden Achiever</span>
+            <small>AI Financial Identity</small>
+          </div>
+        </section>
+      </section>
+
+      <section class="workspace-grid">
+        <form class="control-panel glass-panel" id="shadowForm">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Current behavior</p>
+              <h2>Input Your Shadow Pattern</h2>
+            </div>
+            <span class="status-dot">Live</span>
+          </div>
+
+          <div class="field-grid">
+            <label>
+              Monthly income or allowance
+              <span class="input-wrap"><span>₹</span><input id="income" type="number" min="0" step="500" value="35000" /></span>
+            </label>
+            <label>
+              Target monthly income in 5 years
+              <span class="input-wrap"><span>₹</span><input id="targetIncome" type="number" min="0" step="1000" value="120000" /></span>
+            </label>
+            <label class="range-field">
+              <span>Daily scrolling <strong id="scrollValue">4.5h</strong></span>
+              <input id="scrollHours" type="range" min="0" max="12" step="0.25" value="4.5" />
+            </label>
+            <label class="range-field">
+              <span>Daily focused learning <strong id="studyValue">1.25h</strong></span>
+              <input id="studyHours" type="range" min="0" max="8" step="0.25" value="1.25" />
+            </label>
+            <label>
+              Monthly impulse spending
+              <span class="input-wrap"><span>₹</span><input id="impulseSpend" type="number" min="0" step="250" value="5500" /></span>
+            </label>
+            <label>
+              Unused subscriptions
+              <span class="input-wrap"><span>₹</span><input id="subscriptions" type="number" min="0" step="100" value="1700" /></span>
+            </label>
+            <label>
+              Procrastinated tasks per week
+              <span class="input-wrap"><input id="procrastination" type="number" min="0" max="40" step="1" value="8" /><span>tasks</span></span>
+            </label>
+            <label>
+              Sleep quality
+              <select id="sleepQuality">
+                <option value="0.9">High</option>
+                <option value="0.65" selected>Inconsistent</option>
+                <option value="0.38">Low</option>
+              </select>
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>Primary goal</legend>
+            <div class="segmented">
+              <label><input type="radio" name="goal" value="career" checked />Career</label>
+              <label><input type="radio" name="goal" value="business" />Business</label>
+              <label><input type="radio" name="goal" value="stability" />Stability</label>
+            </div>
+          </fieldset>
+
+          <button class="primary-action" type="submit">Analyze ShadowWorth</button>
+        </form>
+
+        <section class="dashboard">
+          <div class="metric-row">
+            <article class="metric-card">
+              <div class="gauge" style="--score: 0" id="focusGauge"><span id="focusScore">0</span></div>
+              <p>Focus Score</p>
+            </article>
+            <article class="metric-card">
+              <div class="gauge gold" style="--score: 0" id="momentumGauge"><span id="momentumScore">0</span></div>
+              <p>Financial Momentum</p>
+            </article>
+            <article class="metric-card wide">
+              <span class="mini-label">Projected drag</span>
+              <strong id="growthDrag">0%</strong>
+              <p>Estimated slowdown in earning growth if the pattern continues.</p>
+            </article>
+          </div>
+
+          <div class="chart-panel glass-panel">
+            <div class="panel-heading compact">
+              <div>
+                <p class="eyebrow">Future self simulator</p>
+                <h2>Wealth Potential Trajectory</h2>
+              </div>
+              <div class="legend">
+                <span class="legend-good">Recovered path</span>
+                <span class="legend-bad">Current path</span>
+              </div>
+            </div>
+            <canvas id="trajectoryChart" width="1200" height="440" aria-label="Projected best-case and current-path financial trajectories"></canvas>
+          </div>
+
+          <div class="insight-grid" id="timeline">
+            <article class="timeline-card glass-panel">
+              <p class="eyebrow">Wealth death timeline</p>
+              <h3 id="monthlyLoss">₹0 / month</h3>
+              <p id="timelineText">Your monthly hidden loss will appear here.</p>
+              <div class="monthly-meter" aria-hidden="true"><span id="monthlyMeter"></span></div>
+            </article>
+            <article class="leak-card glass-panel">
+              <div class="panel-heading compact">
+                <div>
+                  <p class="eyebrow">Digital leakage detection</p>
+                  <h2>Top Leaks</h2>
+                </div>
+              </div>
+              <ul id="leakList"></ul>
+            </article>
+          </div>
+
+          <section class="roadmap glass-panel" id="roadmap">
+            <div class="panel-heading compact">
+              <div>
+                <p class="eyebrow">Recovery roadmap</p>
+                <h2>Next 30 Days</h2>
+              </div>
+              <button class="ghost-button compact-button" id="copyInsight" type="button">Copy Insight</button>
+            </div>
+            <ol id="roadmapList"></ol>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Insight copied</div>
+    <script src="app.js"></script>
+  </body>
+</html>
